@@ -1,6 +1,7 @@
 package com.java.OTServerSide.com.OT.models;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -14,7 +15,7 @@ public class Video {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String name;
-	private File file;
+	private InputStream inputStream;
 	private Date date;
 	private boolean isPrivate;
 	private int likes;
@@ -22,11 +23,11 @@ public class Video {
 	
 	public Video() {}
 	
-	public Video(String name, boolean isPrivate, File file, Date date) {
+	public Video(String name, boolean isPrivate, Date date, InputStream inputStream) {
 		this.name = name;
 		this.isPrivate = isPrivate;
-		this.file = file;
 		this.date = date;
+		this.inputStream = inputStream;
 	}
 	
 
@@ -46,12 +47,12 @@ public class Video {
 		this.name = name;
 	}
 
-	public File getFile() {
-		return file;
+	public InputStream getInputStream() {
+		return inputStream;
 	}
 
-	public void setFile(File file) {
-		this.file = file;
+	public void setInputStream(InputStream inputStream) {
+		this.inputStream = inputStream;
 	}
 
 	public Date getDate() {

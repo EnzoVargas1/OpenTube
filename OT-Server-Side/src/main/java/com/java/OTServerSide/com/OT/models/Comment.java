@@ -1,31 +1,24 @@
 package com.java.OTServerSide.com.OT.models;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
-public class Comment {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+
+public abstract class Comment {
+	
 	private String text;
 	private int likes;
 	private int dislikes;
+	private Date date;
 	
 	public Comment() {}
 	
 	public Comment(String text) {
 		
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getText() {
@@ -50,6 +43,14 @@ public class Comment {
 
 	public void setDislikes(int dislikes) {
 		this.dislikes = dislikes;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
 	}
 	
 }

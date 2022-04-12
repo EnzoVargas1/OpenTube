@@ -17,20 +17,17 @@ public class User {
 	private String email;
 	private String phoneNumber;
 	private Date birthDate;
-	private File photo;
 	
 	public User() {}
 	
 	public User(String username, String password, String email, 
-    String phoneNumber, File photo) {
+    String phoneNumber) {
 		this.username = username;
 		this.password = password;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
-		this.photo = photo;
 		this.birthDate = new Date();
-	}
-	
+	}	
 	
 	public int getId() {
 		return id;
@@ -78,14 +75,6 @@ public class User {
 
 	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
-	}
-
-	public File getPhoto() {
-		return photo;
-	}
-
-	public void setPhoto(File photo) {
-		this.photo = photo;
 	}
 	
 	
