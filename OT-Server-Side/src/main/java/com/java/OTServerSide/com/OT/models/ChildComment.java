@@ -1,19 +1,22 @@
 package com.java.OTServerSide.com.OT.models;
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-public class SubComment extends Comment {
+@Entity
+public class ChildComment extends Comment {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
-	public SubComment() {}
 	
-	public SubComment(String text) {
+	public ChildComment() {}
+	
+	public ChildComment(String text) {
 		super(text);
 		this.setDate(new Date());
 		this.setDate(getDate());

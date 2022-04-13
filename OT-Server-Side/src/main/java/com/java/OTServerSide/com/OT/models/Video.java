@@ -2,12 +2,16 @@ package com.java.OTServerSide.com.OT.models;
 
 import java.io.File;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import com.java.OTServerSide.com.OT.security.models.User;
 
 @Entity
 public class Video {
@@ -20,6 +24,9 @@ public class Video {
 	private boolean isPrivate;
 	private int likes;
 	private int dislikes;
+	
+	private List<RootComment> comments = new ArrayList<RootComment>();
+	private User user; 
 	
 	public Video() {}
 	
