@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.websocket.Decoder.Binary;
 
+import com.java.OTServerSide.com.OT.security.models.User;
+
 @Entity
 public class Profile {
 	 @Id
@@ -14,6 +16,7 @@ public class Profile {
 	 private String title;
 	 private Binary image;
 	 
+	 private User user;
 	 public Profile() {}
 	 
 	 public Profile(String title, Binary Image){
@@ -44,6 +47,5 @@ public class Profile {
 	public void setImage(Binary image) {
 		this.image = image;
 	}
-	 
-	 
+	  
 }

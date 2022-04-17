@@ -26,7 +26,7 @@ public class Video {
 	private int dislikes;
 	
 	private List<RootComment> comments = new ArrayList<RootComment>();
-	private User user; 
+	private Channel channel;
 	
 	public Video() {}
 	

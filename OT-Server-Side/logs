@@ -1,403 +1,687 @@
-2022-04-12 22:14:49.389  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 13904 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
-2022-04-12 22:14:49.399  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-04-12 22:14:49.497  INFO 13904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-12 22:14:49.497  INFO 13904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-12 22:14:50.657  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-12 22:14:50.687  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
-2022-04-12 22:14:51.798  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-12 22:14:51.814  INFO 13904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-12 22:14:51.815  INFO 13904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-12 22:14:51.962  INFO 13904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-12 22:14:51.963  INFO 13904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2464 ms
-2022-04-12 22:14:52.319  INFO 13904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-12 22:14:52.406  INFO 13904 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
-2022-04-12 22:14:52.658  INFO 13904 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-04-12 22:14:52.794  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-04-12 22:14:52.803  WARN 13904 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-04-12 22:14:53.218  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-04-12 22:14:53.244  INFO 13904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-04-12 22:14:53.726  INFO 13904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-12 22:14:53.738  INFO 13904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:14:53.821  WARN 13904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-12 22:14:54.430  WARN 13904 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+2022-04-16 21:21:37.363  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:21:37.373  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:21:37.474  INFO 7488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-16 21:21:37.475  INFO 7488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-16 21:21:38.681  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:21:38.715  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:21:39.855  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:21:39.871  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:21:39.872  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:21:40.011  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:21:40.012  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2536 ms
+2022-04-16 21:21:40.502  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:21:40.602  INFO 7488 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-04-16 21:21:40.929  INFO 7488 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-16 21:21:41.121  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-16 21:21:41.128  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:21:41.638  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-16 21:21:41.672  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:21:42.333  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:21:42.343  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:21:42.429  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:21:43.075  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: dcc2f56c-4484-4a77-946d-45c29cf442da
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2022-04-12 22:14:54.659  INFO 13904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-04-12 22:14:54.774  INFO 13904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-12 22:14:54.834  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-12 22:14:54.848  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 6.007 seconds (JVM running for 6.926)
-2022-04-12 22:15:14.803  INFO 13904 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:15:14.819  INFO 13904 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-04-12 22:15:14.912  INFO 13904 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-04-12 22:15:15.439  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 13904 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
-2022-04-12 22:15:15.440  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-04-12 22:15:16.437  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-12 22:15:16.441  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
-2022-04-12 22:15:16.905  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-12 22:15:16.907  INFO 13904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-12 22:15:16.907  INFO 13904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-12 22:15:17.008  INFO 13904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-12 22:15:17.009  INFO 13904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1561 ms
-2022-04-12 22:15:17.155  INFO 13904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-12 22:15:17.171  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2022-04-12 22:15:17.172  WARN 13904 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-04-12 22:15:17.283  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2022-04-12 22:15:17.286  INFO 13904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-04-12 22:15:17.322  INFO 13904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-12 22:15:17.323  INFO 13904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:15:17.404  WARN 13904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-12 22:15:17.910  WARN 13904 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: cfd3ca7c-f229-4d66-9ad4-0e118a992885
+Using generated security password: b9583e8b-6b81-497c-a038-a949f069656c
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2022-04-12 22:15:17.944  INFO 13904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-04-12 22:15:18.007  INFO 13904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-12 22:15:18.022  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-12 22:15:18.030  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 2.769 seconds (JVM running for 30.108)
-2022-04-12 22:15:18.036  INFO 13904 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-12 22:15:20.494  INFO 13904 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:15:20.496  INFO 13904 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2022-04-12 22:15:20.504  INFO 13904 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2022-04-12 22:15:20.606  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 13904 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
-2022-04-12 22:15:20.607  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-04-12 22:15:21.072  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-12 22:15:21.081  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
-2022-04-12 22:15:21.477  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-12 22:15:21.482  INFO 13904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-12 22:15:21.484  INFO 13904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-12 22:15:21.535  INFO 13904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-12 22:15:21.535  INFO 13904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 924 ms
-2022-04-12 22:15:21.592  INFO 13904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-12 22:15:21.596  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2022-04-12 22:15:21.598  WARN 13904 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-04-12 22:15:21.624  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2022-04-12 22:15:21.625  INFO 13904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-04-12 22:15:21.643  INFO 13904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-12 22:15:21.644  INFO 13904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:15:21.667  WARN 13904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-12 22:15:21.839  WARN 13904 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+2022-04-16 21:21:43.311  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:21:43.422  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:21:43.482  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:21:43.498  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 6.819 seconds (JVM running for 7.87)
+2022-04-16 21:22:05.607  INFO 7488 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-16 21:22:05.613  INFO 7488 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-16 21:22:05.619  INFO 7488 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-04-16 21:22:05.841  WARN 7488 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [102] milliseconds.
+2022-04-16 21:24:52.908  INFO 7488 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:24:52.913  INFO 7488 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-16 21:24:52.927  INFO 7488 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-16 21:24:53.046  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:24:53.047  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:24:53.406  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:24:53.409  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:24:53.628  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:24:53.629  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:24:53.630  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:24:53.664  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:24:53.664  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 612 ms
+2022-04-16 21:24:53.756  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:24:53.766  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-04-16 21:24:53.767  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:24:53.807  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-04-16 21:24:53.808  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:24:53.833  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:24:53.833  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:24:53.871  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:24:54.112  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 350f2d56-ce63-4441-a26d-a904edaba79f
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2022-04-12 22:15:21.872  INFO 13904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-04-12 22:15:21.918  INFO 13904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-12 22:15:21.935  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-12 22:15:21.942  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 1.382 seconds (JVM running for 34.019)
-2022-04-12 22:15:21.947  INFO 13904 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-12 22:15:31.540  INFO 13904 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:15:31.541  INFO 13904 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2022-04-12 22:15:31.549  INFO 13904 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2022-04-12 22:15:31.622  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 13904 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
-2022-04-12 22:15:31.623  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-04-12 22:15:31.915  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-12 22:15:31.919  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
-2022-04-12 22:15:32.063  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-12 22:15:32.064  INFO 13904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-12 22:15:32.064  INFO 13904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-12 22:15:32.087  INFO 13904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-12 22:15:32.088  INFO 13904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 462 ms
-2022-04-12 22:15:32.128  INFO 13904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-12 22:15:32.133  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2022-04-12 22:15:32.133  WARN 13904 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-04-12 22:15:32.158  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2022-04-12 22:15:32.159  INFO 13904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-04-12 22:15:32.178  INFO 13904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-12 22:15:32.178  INFO 13904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:15:32.205  WARN 13904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-12 22:15:32.349  WARN 13904 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: bad14855-cbf0-4c06-b101-37ddeafefcc1
+Using generated security password: 08f59f5b-b66f-4628-85dd-a50a53a33209
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2022-04-12 22:15:32.363  INFO 13904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-04-12 22:15:32.390  INFO 13904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-12 22:15:32.401  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-12 22:15:32.410  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.815 seconds (JVM running for 44.487)
-2022-04-12 22:15:32.413  INFO 13904 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-12 22:17:15.222  INFO 13904 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:17:15.224  INFO 13904 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
-2022-04-12 22:17:15.234  INFO 13904 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
-2022-04-12 22:17:15.319  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 13904 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
-2022-04-12 22:17:15.319  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-04-12 22:17:15.544  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-12 22:17:15.546  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
-2022-04-12 22:17:15.671  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-12 22:17:15.672  INFO 13904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-12 22:17:15.672  INFO 13904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-12 22:17:15.693  INFO 13904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-12 22:17:15.693  INFO 13904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 371 ms
-2022-04-12 22:17:15.737  INFO 13904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-12 22:17:15.742  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
-2022-04-12 22:17:15.742  WARN 13904 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-04-12 22:17:15.769  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
-2022-04-12 22:17:15.770  INFO 13904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-04-12 22:17:15.781  INFO 13904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-12 22:17:15.782  INFO 13904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:17:15.799  WARN 13904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-12 22:17:15.887  WARN 13904 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+2022-04-16 21:24:54.135  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:24:54.193  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:24:54.210  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:24:54.219  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 1.229 seconds (JVM running for 198.591)
+2022-04-16 21:24:54.226  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:26:46.939  INFO 7488 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:26:46.940  INFO 7488 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-04-16 21:26:46.953  INFO 7488 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-04-16 21:26:47.041  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:26:47.042  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:26:47.339  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:26:47.341  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:26:47.513  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:26:47.515  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:26:47.516  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:26:47.555  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:26:47.556  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 508 ms
+2022-04-16 21:26:47.619  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:26:47.625  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-04-16 21:26:47.625  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:26:47.654  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-04-16 21:26:47.655  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:26:47.675  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:26:47.675  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:26:47.703  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:26:47.826  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 51d710fd-4dde-4ae6-9a5f-df4e3953e7b7
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2022-04-12 22:17:15.896  INFO 13904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-04-12 22:17:15.918  INFO 13904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-12 22:17:15.931  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-12 22:17:15.935  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.647 seconds (JVM running for 148.013)
-2022-04-12 22:17:15.938  INFO 13904 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-12 22:18:26.966  INFO 13904 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:18:26.968  INFO 13904 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
-2022-04-12 22:18:26.979  INFO 13904 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
-2022-04-12 22:18:27.068  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 13904 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
-2022-04-12 22:18:27.069  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-04-12 22:18:27.253  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-12 22:18:27.256  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
-2022-04-12 22:18:27.355  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-12 22:18:27.356  INFO 13904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-12 22:18:27.357  INFO 13904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-12 22:18:27.368  INFO 13904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-12 22:18:27.369  INFO 13904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 296 ms
-2022-04-12 22:18:27.394  INFO 13904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-12 22:18:27.399  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
-2022-04-12 22:18:27.399  WARN 13904 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-04-12 22:18:27.427  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
-2022-04-12 22:18:27.427  INFO 13904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-04-12 22:18:27.437  INFO 13904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-12 22:18:27.437  INFO 13904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:18:27.455  WARN 13904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-12 22:18:27.532  WARN 13904 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 8da687d1-9709-41f8-8a36-747fdd17bb36
+Using generated security password: 47ca94d2-4053-4ad9-bbbb-5a02dd8c70b1
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2022-04-12 22:18:27.542  INFO 13904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-04-12 22:18:27.555  INFO 13904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-12 22:18:27.564  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-12 22:18:27.567  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.526 seconds (JVM running for 219.644)
-2022-04-12 22:18:27.568  INFO 13904 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-12 22:18:35.154  INFO 13904 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:18:35.156  INFO 13904 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
-2022-04-12 22:18:35.165  INFO 13904 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
-2022-04-12 22:18:35.245  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 13904 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
-2022-04-12 22:18:35.245  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-04-12 22:18:35.426  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-12 22:18:35.428  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
-2022-04-12 22:18:35.541  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-12 22:18:35.542  INFO 13904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-12 22:18:35.542  INFO 13904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-12 22:18:35.563  INFO 13904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-12 22:18:35.564  INFO 13904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 317 ms
-2022-04-12 22:18:35.595  INFO 13904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-12 22:18:35.598  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
-2022-04-12 22:18:35.599  WARN 13904 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-04-12 22:18:35.627  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
-2022-04-12 22:18:35.628  INFO 13904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-04-12 22:18:35.650  INFO 13904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-12 22:18:35.650  INFO 13904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:18:35.671  WARN 13904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-12 22:18:35.743  WARN 13904 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+2022-04-16 21:26:47.845  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:26:47.869  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:26:47.884  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:26:47.888  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.887 seconds (JVM running for 312.26)
+2022-04-16 21:26:47.889  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:27:30.108  INFO 7488 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:27:30.109  INFO 7488 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-04-16 21:27:30.121  INFO 7488 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-04-16 21:27:30.207  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:27:30.207  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:27:30.498  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:27:30.500  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:27:30.672  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:27:30.674  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:27:30.674  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:27:30.704  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:27:30.704  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 493 ms
+2022-04-16 21:27:30.758  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:27:30.766  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2022-04-16 21:27:30.766  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:27:30.797  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2022-04-16 21:27:30.799  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:27:30.817  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:27:30.818  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:27:30.846  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:27:30.985  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 7320c070-0dd2-41d3-ad48-c68d9a28f5ca
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2022-04-12 22:18:35.750  INFO 13904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-04-12 22:18:35.770  INFO 13904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-12 22:18:35.779  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-12 22:18:35.781  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.563 seconds (JVM running for 227.859)
-2022-04-12 22:18:35.783  INFO 13904 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-12 22:46:41.302  INFO 13904 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:46:41.303  INFO 13904 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
-2022-04-12 22:46:41.310  INFO 13904 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
-2022-04-12 22:46:41.379  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 13904 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
-2022-04-12 22:46:41.379  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-04-12 22:46:41.525  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-12 22:46:41.528  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
-2022-04-12 22:46:41.652  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-12 22:46:41.653  INFO 13904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-12 22:46:41.654  INFO 13904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-12 22:46:41.682  INFO 13904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-12 22:46:41.682  INFO 13904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 302 ms
-2022-04-12 22:46:41.710  INFO 13904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-12 22:46:41.713  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
-2022-04-12 22:46:41.713  WARN 13904 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-04-12 22:46:41.740  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
-2022-04-12 22:46:41.740  INFO 13904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-04-12 22:46:41.752  INFO 13904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-12 22:46:41.752  INFO 13904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:46:41.768  WARN 13904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-12 22:46:41.842  WARN 13904 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 8b8be7bf-413c-46f0-81b2-59cc36fdca96
+Using generated security password: f26ae92d-8bdb-44b5-a98c-046172471359
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2022-04-12 22:46:41.848  INFO 13904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-04-12 22:46:41.862  INFO 13904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-12 22:46:41.871  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-12 22:46:41.873  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.523 seconds (JVM running for 1913.951)
-2022-04-12 22:46:41.876  INFO 13904 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-12 22:48:53.309  INFO 13904 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:48:53.310  INFO 13904 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
-2022-04-12 22:48:53.317  INFO 13904 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
-2022-04-12 22:48:53.395  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 13904 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
-2022-04-12 22:48:53.395  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-04-12 22:48:53.527  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-12 22:48:53.529  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
-2022-04-12 22:48:53.651  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-12 22:48:53.653  INFO 13904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-12 22:48:53.653  INFO 13904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-12 22:48:53.680  INFO 13904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-12 22:48:53.680  INFO 13904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 283 ms
-2022-04-12 22:48:53.709  INFO 13904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-12 22:48:53.714  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
-2022-04-12 22:48:53.714  WARN 13904 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-04-12 22:48:53.738  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
-2022-04-12 22:48:53.739  INFO 13904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-04-12 22:48:53.750  INFO 13904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-12 22:48:53.750  INFO 13904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:48:53.769  WARN 13904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-12 22:48:53.838  WARN 13904 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+2022-04-16 21:27:30.999  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:27:31.024  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:27:31.040  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:27:31.047  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.881 seconds (JVM running for 355.419)
+2022-04-16 21:27:31.050  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:29:51.143  INFO 7488 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:29:51.145  INFO 7488 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2022-04-16 21:29:51.154  INFO 7488 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2022-04-16 21:29:51.303  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:29:51.304  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:29:51.598  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:29:51.600  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:29:51.780  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:29:51.781  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:29:51.782  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:29:51.807  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:29:51.807  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 499 ms
+2022-04-16 21:29:51.858  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:29:51.865  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2022-04-16 21:29:51.865  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:29:51.897  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2022-04-16 21:29:51.898  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:29:51.914  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:29:51.915  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:29:51.946  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:29:52.072  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 9a9bf879-4e49-49e2-9210-e391ebe6274c
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2022-04-12 22:48:53.844  INFO 13904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-04-12 22:48:53.852  INFO 13904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-12 22:48:53.861  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-12 22:48:53.863  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.494 seconds (JVM running for 2045.941)
-2022-04-12 22:48:53.864  INFO 13904 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-12 22:51:56.062  INFO 13904 --- [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:51:56.063  INFO 13904 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
-2022-04-12 22:51:56.072  INFO 13904 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
-2022-04-12 22:51:56.148  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 13904 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
-2022-04-12 22:51:56.148  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-04-12 22:51:56.332  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-12 22:51:56.335  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
-2022-04-12 22:51:56.437  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-12 22:51:56.439  INFO 13904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-12 22:51:56.439  INFO 13904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-12 22:51:56.464  INFO 13904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-12 22:51:56.464  INFO 13904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 313 ms
-2022-04-12 22:51:56.489  INFO 13904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-12 22:51:56.494  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
-2022-04-12 22:51:56.494  WARN 13904 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-04-12 22:51:56.514  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
-2022-04-12 22:51:56.514  INFO 13904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-04-12 22:51:56.528  INFO 13904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-12 22:51:56.528  INFO 13904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:51:56.545  WARN 13904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-12 22:51:56.617  WARN 13904 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 693f5019-9694-48ed-833d-e64cf0b44709
+Using generated security password: 2b2c8797-f868-4b8e-8f90-db4bd5a03dcf
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2022-04-12 22:51:56.623  INFO 13904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-04-12 22:51:56.636  INFO 13904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-12 22:51:56.644  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-12 22:51:56.647  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.524 seconds (JVM running for 2228.725)
-2022-04-12 22:51:56.650  INFO 13904 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-12 22:54:04.748  INFO 13904 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:54:04.749  INFO 13904 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
-2022-04-12 22:54:04.756  INFO 13904 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
-2022-04-12 22:54:04.835  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 13904 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
-2022-04-12 22:54:04.835  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-04-12 22:54:05.005  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-12 22:54:05.007  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
-2022-04-12 22:54:05.093  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-12 22:54:05.094  INFO 13904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-12 22:54:05.094  INFO 13904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-12 22:54:05.111  INFO 13904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-12 22:54:05.111  INFO 13904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 274 ms
-2022-04-12 22:54:05.134  INFO 13904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-12 22:54:05.137  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
-2022-04-12 22:54:05.137  WARN 13904 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-04-12 22:54:05.162  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
-2022-04-12 22:54:05.163  INFO 13904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-04-12 22:54:05.174  INFO 13904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-12 22:54:05.175  INFO 13904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:54:05.203  WARN 13904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-12 22:54:05.345  WARN 13904 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+2022-04-16 21:29:52.089  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:29:52.126  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:29:52.143  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:29:52.148  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.902 seconds (JVM running for 496.52)
+2022-04-16 21:29:52.151  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:37:26.511  INFO 7488 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:37:26.513  INFO 7488 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2022-04-16 21:37:26.520  INFO 7488 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2022-04-16 21:37:26.605  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:37:26.605  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:37:26.863  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:37:26.866  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:37:27.004  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:37:27.005  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:37:27.006  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:37:27.027  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:37:27.027  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 416 ms
+2022-04-16 21:37:27.073  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:37:27.079  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2022-04-16 21:37:27.079  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:37:27.106  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2022-04-16 21:37:27.106  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:37:27.120  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:37:27.120  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:37:27.143  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:37:27.228  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 58c13463-eb30-4835-8a80-ac5d924675b8
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2022-04-12 22:54:05.357  INFO 13904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-04-12 22:54:05.378  INFO 13904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-12 22:54:05.392  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-12 22:54:05.396  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.587 seconds (JVM running for 2357.474)
-2022-04-12 22:54:05.398  INFO 13904 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-12 22:57:31.874  INFO 13904 --- [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:57:31.876  INFO 13904 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
-2022-04-12 22:57:31.883  INFO 13904 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
-2022-04-12 22:57:32.003  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 13904 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
-2022-04-12 22:57:32.004  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-04-12 22:57:32.154  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-12 22:57:32.156  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
-2022-04-12 22:57:32.252  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-12 22:57:32.253  INFO 13904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-12 22:57:32.253  INFO 13904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-12 22:57:32.279  INFO 13904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-12 22:57:32.279  INFO 13904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 272 ms
-2022-04-12 22:57:32.302  INFO 13904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-12 22:57:32.306  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
-2022-04-12 22:57:32.306  WARN 13904 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-04-12 22:57:32.330  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
-2022-04-12 22:57:32.330  INFO 13904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-04-12 22:57:32.339  INFO 13904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-12 22:57:32.340  INFO 13904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 22:57:32.359  WARN 13904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-12 22:57:32.438  WARN 13904 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 1bc63250-3b30-435c-b160-e6a611491942
+Using generated security password: 24c3b957-301d-4122-b8d1-dba5f860cdb6
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2022-04-12 22:57:32.446  INFO 13904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-04-12 22:57:32.455  INFO 13904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-12 22:57:32.465  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-12 22:57:32.468  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.508 seconds (JVM running for 2564.545)
-2022-04-12 22:57:32.469  INFO 13904 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-04-12 23:01:41.820  INFO 13904 --- [Thread-47] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 23:01:41.821  INFO 13904 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
-2022-04-12 23:01:41.828  INFO 13904 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
-2022-04-12 23:01:41.945  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 13904 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
-2022-04-12 23:01:41.946  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-04-12 23:01:42.148  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-12 23:01:42.149  INFO 13904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
-2022-04-12 23:01:42.257  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-04-12 23:01:42.258  INFO 13904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-12 23:01:42.258  INFO 13904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-12 23:01:42.280  INFO 13904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-12 23:01:42.280  INFO 13904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 332 ms
-2022-04-12 23:01:42.325  INFO 13904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-12 23:01:42.332  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
-2022-04-12 23:01:42.332  WARN 13904 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-04-12 23:01:42.359  INFO 13904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
-2022-04-12 23:01:42.363  INFO 13904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2022-04-12 23:01:42.376  INFO 13904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-12 23:01:42.377  INFO 13904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-12 23:01:42.397  WARN 13904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-12 23:01:42.486  WARN 13904 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+2022-04-16 21:37:27.239  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:37:27.254  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:37:27.265  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:37:27.269  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.697 seconds (JVM running for 951.642)
+2022-04-16 21:37:27.271  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:38:14.735  INFO 7488 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:38:14.736  INFO 7488 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2022-04-16 21:38:14.749  INFO 7488 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2022-04-16 21:38:14.879  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:38:14.880  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:38:15.139  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:38:15.141  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:38:15.308  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:38:15.309  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:38:15.309  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:38:15.333  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:38:15.333  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 447 ms
+2022-04-16 21:38:15.385  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:38:15.392  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2022-04-16 21:38:15.392  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:38:15.422  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2022-04-16 21:38:15.423  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:38:15.438  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:38:15.438  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:38:15.464  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:38:15.625  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: e1e68cb2-a771-4f0e-aefc-6176e2bff649
+Using generated security password: 3280ff1d-0536-48f5-b521-5066b388c334
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2022-04-12 23:01:42.498  INFO 13904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-04-12 23:01:42.510  INFO 13904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-12 23:01:42.522  INFO 13904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-04-12 23:01:42.525  INFO 13904 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.619 seconds (JVM running for 2814.602)
-2022-04-12 23:01:42.527  INFO 13904 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:38:15.644  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:38:15.675  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:38:15.687  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:38:15.692  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.86 seconds (JVM running for 1000.064)
+2022-04-16 21:38:15.695  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:38:21.188  INFO 7488 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:38:21.189  INFO 7488 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2022-04-16 21:38:21.200  INFO 7488 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2022-04-16 21:38:21.313  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:38:21.318  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:38:21.615  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:38:21.618  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:38:21.757  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:38:21.759  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:38:21.759  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:38:21.781  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:38:21.782  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 461 ms
+2022-04-16 21:38:21.830  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:38:21.834  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2022-04-16 21:38:21.834  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:38:21.856  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2022-04-16 21:38:21.857  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:38:21.872  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:38:21.873  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:38:21.897  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:38:22.051  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a03610c6-ddce-4321-8113-1a66f1aaf1be
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-16 21:38:22.079  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:38:22.111  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:38:22.132  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:38:22.136  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.883 seconds (JVM running for 1006.508)
+2022-04-16 21:38:22.138  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:39:54.531  INFO 7488 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:39:54.533  INFO 7488 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2022-04-16 21:39:54.545  INFO 7488 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2022-04-16 21:39:54.655  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:39:54.655  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:39:54.982  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:39:54.985  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:39:55.124  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:39:55.126  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:39:55.126  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:39:55.152  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:39:55.152  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 493 ms
+2022-04-16 21:39:55.200  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:39:55.204  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2022-04-16 21:39:55.204  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:39:55.235  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2022-04-16 21:39:55.236  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:39:55.254  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:39:55.254  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:39:55.278  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:39:55.387  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 94dab819-2511-49a2-bd86-cb29d024ab04
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-16 21:39:55.407  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:39:55.426  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:39:55.438  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:39:55.448  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.834 seconds (JVM running for 1099.82)
+2022-04-16 21:39:55.451  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:40:16.271  INFO 7488 --- [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:40:16.272  INFO 7488 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2022-04-16 21:40:16.278  INFO 7488 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2022-04-16 21:40:16.382  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:40:16.382  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:40:16.591  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:40:16.594  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:40:16.740  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:40:16.741  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:40:16.742  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:40:16.762  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:40:16.762  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 375 ms
+2022-04-16 21:40:16.810  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:40:16.816  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2022-04-16 21:40:16.816  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:40:16.846  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2022-04-16 21:40:16.847  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:40:16.862  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:40:16.863  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:40:16.883  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:40:16.999  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f33d6a15-9224-43d0-aea0-8363fc847ff9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-16 21:40:17.016  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:40:17.032  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:40:17.046  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:40:17.050  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.715 seconds (JVM running for 1121.421)
+2022-04-16 21:40:17.051  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:40:37.904  INFO 7488 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:40:37.905  INFO 7488 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2022-04-16 21:40:37.912  INFO 7488 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2022-04-16 21:40:37.985  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:40:37.985  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:40:38.173  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:40:38.175  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:40:38.311  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:40:38.312  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:40:38.312  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:40:38.334  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:40:38.334  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 346 ms
+2022-04-16 21:40:38.381  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:40:38.385  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2022-04-16 21:40:38.385  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:40:38.409  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2022-04-16 21:40:38.411  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:40:38.423  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:40:38.423  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:40:38.447  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:40:38.563  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6d3d5bf0-a091-47ce-a07e-62cf8188aee3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-16 21:40:38.579  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:40:38.602  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:40:38.616  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:40:38.620  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.667 seconds (JVM running for 1142.992)
+2022-04-16 21:40:38.622  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:41:47.503  INFO 7488 --- [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:41:47.504  INFO 7488 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2022-04-16 21:41:47.523  INFO 7488 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2022-04-16 21:41:47.615  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:41:47.615  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:41:47.798  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:41:47.800  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:41:47.911  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:41:47.912  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:41:47.912  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:41:47.928  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:41:47.928  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 311 ms
+2022-04-16 21:41:47.968  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:41:47.971  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2022-04-16 21:41:47.971  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:41:47.992  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2022-04-16 21:41:47.993  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:41:48.005  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:41:48.005  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:41:48.022  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:41:48.100  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3303e0c2-be18-4eca-9ef0-13a07da4d546
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-16 21:41:48.111  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:41:48.128  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:41:48.140  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:41:48.144  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.564 seconds (JVM running for 1212.516)
+2022-04-16 21:41:48.146  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:42:00.856  INFO 7488 --- [Thread-47] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:42:00.857  INFO 7488 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2022-04-16 21:42:00.864  INFO 7488 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2022-04-16 21:42:00.931  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:42:00.932  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:42:01.075  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:42:01.077  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:42:01.181  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:42:01.183  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:42:01.183  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:42:01.203  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:42:01.203  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 269 ms
+2022-04-16 21:42:01.232  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:42:01.236  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2022-04-16 21:42:01.236  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:42:01.255  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2022-04-16 21:42:01.255  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:42:01.265  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:42:01.265  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:42:01.281  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:42:01.360  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 60c12351-ad12-4d28-91c7-ed399d8cd97b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-16 21:42:01.371  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:42:01.391  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:42:01.402  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:42:01.406  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.496 seconds (JVM running for 1225.778)
+2022-04-16 21:42:01.407  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:42:28.422  INFO 7488 --- [Thread-51] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:42:28.423  INFO 7488 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2022-04-16 21:42:28.427  INFO 7488 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2022-04-16 21:42:28.509  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:42:28.509  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:42:28.672  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:42:28.673  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:42:28.771  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:42:28.772  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:42:28.772  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:42:28.788  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:42:28.788  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 275 ms
+2022-04-16 21:42:28.822  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:42:28.826  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2022-04-16 21:42:28.826  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:42:28.848  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2022-04-16 21:42:28.849  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:42:28.861  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:42:28.861  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:42:28.876  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:42:28.927  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2a3ede09-0829-4b33-a3d8-dc7dc3fc0198
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-16 21:42:28.935  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:42:28.942  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:42:28.949  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:42:28.952  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.479 seconds (JVM running for 1253.325)
+2022-04-16 21:42:28.954  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:45:18.836  INFO 7488 --- [Thread-55] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:45:18.837  INFO 7488 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2022-04-16 21:45:18.843  INFO 7488 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2022-04-16 21:45:18.956  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:45:18.957  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:45:19.134  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:45:19.135  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:45:19.232  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:45:19.232  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:45:19.233  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:45:19.258  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:45:19.258  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 298 ms
+2022-04-16 21:45:19.300  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:45:19.304  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2022-04-16 21:45:19.305  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:45:19.329  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2022-04-16 21:45:19.329  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:45:19.346  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:45:19.347  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:45:19.373  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:45:19.473  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1582738f-5c0a-454a-ba99-e05bf45966b7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-16 21:45:19.481  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:45:19.502  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:45:19.511  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:45:19.516  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.604 seconds (JVM running for 1423.888)
+2022-04-16 21:45:19.520  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:45:32.230  INFO 7488 --- [Thread-59] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:45:32.231  INFO 7488 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2022-04-16 21:45:32.238  INFO 7488 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2022-04-16 21:45:32.326  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:45:32.327  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:45:32.542  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:45:32.544  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:45:32.707  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:45:32.709  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:45:32.709  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:45:32.728  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:45:32.728  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 398 ms
+2022-04-16 21:45:32.793  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:45:32.801  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
+2022-04-16 21:45:32.802  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:45:32.828  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
+2022-04-16 21:45:32.829  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:45:32.844  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:45:32.845  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:45:32.878  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:45:33.021  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 50018dae-714c-494e-b226-07ecfeff3238
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-16 21:45:33.031  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:45:33.058  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:45:33.067  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:45:33.071  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.786 seconds (JVM running for 1437.444)
+2022-04-16 21:45:33.073  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:45:57.056  INFO 7488 --- [Thread-63] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:45:57.059  INFO 7488 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
+2022-04-16 21:45:57.068  INFO 7488 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
+2022-04-16 21:45:57.191  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:45:57.192  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:45:57.342  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:45:57.344  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:45:57.457  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:45:57.458  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:45:57.458  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:45:57.473  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:45:57.473  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 277 ms
+2022-04-16 21:45:57.516  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:45:57.520  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
+2022-04-16 21:45:57.520  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:45:57.549  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
+2022-04-16 21:45:57.550  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:45:57.563  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:45:57.563  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:45:57.586  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:45:57.711  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3fba3e81-bdde-413f-9504-92db29453aa8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-16 21:45:57.723  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:45:57.744  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:45:57.755  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:45:57.763  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.61 seconds (JVM running for 1462.135)
+2022-04-16 21:45:57.767  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:48:21.468  INFO 7488 --- [Thread-67] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:48:21.468  INFO 7488 --- [Thread-67] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
+2022-04-16 21:48:21.474  INFO 7488 --- [Thread-67] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
+2022-04-16 21:48:21.583  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:48:21.583  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:48:21.753  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:48:21.756  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:48:21.827  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:48:21.828  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:48:21.828  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:48:21.843  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:48:21.843  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 256 ms
+2022-04-16 21:48:21.887  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:48:21.892  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
+2022-04-16 21:48:21.892  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:48:21.916  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
+2022-04-16 21:48:21.917  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:48:21.931  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:48:21.931  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:48:21.946  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:48:22.008  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 67842827-9323-436e-a162-c48ced36736c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-16 21:48:22.017  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:48:22.030  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:48:22.039  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:48:22.042  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.496 seconds (JVM running for 1606.414)
+2022-04-16 21:48:22.043  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:52:40.411  INFO 7488 --- [Thread-71] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:52:40.413  INFO 7488 --- [Thread-71] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown initiated...
+2022-04-16 21:52:40.419  INFO 7488 --- [Thread-71] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown completed.
+2022-04-16 21:52:40.511  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:52:40.512  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:52:40.641  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:52:40.642  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:52:40.714  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:52:40.715  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:52:40.715  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:52:40.732  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:52:40.733  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 218 ms
+2022-04-16 21:52:40.782  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:52:40.789  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Starting...
+2022-04-16 21:52:40.789  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:52:40.808  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Start completed.
+2022-04-16 21:52:40.809  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:52:40.821  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:52:40.821  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:52:40.835  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:52:40.913  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3e846796-c6a5-4481-9a18-6568d905cc1e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-16 21:52:40.920  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:52:40.937  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:52:40.947  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:52:40.950  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.47 seconds (JVM running for 1865.322)
+2022-04-16 21:52:40.952  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:53:04.953  INFO 7488 --- [Thread-75] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:53:04.954  INFO 7488 --- [Thread-75] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown initiated...
+2022-04-16 21:53:04.961  INFO 7488 --- [Thread-75] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown completed.
+2022-04-16 21:53:05.068  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:53:05.069  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:53:05.199  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:53:05.201  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:53:05.300  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:53:05.302  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:53:05.302  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:53:05.325  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:53:05.325  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 254 ms
+2022-04-16 21:53:05.351  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:53:05.355  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Starting...
+2022-04-16 21:53:05.356  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:53:05.381  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Start completed.
+2022-04-16 21:53:05.381  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:53:05.392  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:53:05.393  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:53:05.413  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:53:05.488  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5c4e731a-0d6e-4f5c-a874-20e9df066806
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-16 21:53:05.497  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:53:05.511  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:53:05.520  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:53:05.524  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.488 seconds (JVM running for 1889.896)
+2022-04-16 21:53:05.526  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:53:42.889  INFO 7488 --- [Thread-79] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:53:42.890  INFO 7488 --- [Thread-79] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown initiated...
+2022-04-16 21:53:42.895  INFO 7488 --- [Thread-79] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown completed.
+2022-04-16 21:53:42.963  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:53:42.964  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:53:43.115  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:53:43.116  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:53:43.194  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:53:43.195  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:53:43.195  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:53:43.215  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:53:43.215  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 249 ms
+2022-04-16 21:53:43.249  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:53:43.255  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Starting...
+2022-04-16 21:53:43.255  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:53:43.276  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Start completed.
+2022-04-16 21:53:43.276  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:53:43.287  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:53:43.288  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:53:43.301  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:53:43.359  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4eedb944-f9e4-4a69-9894-2413f81efc80
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-16 21:53:43.363  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:53:43.372  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:53:43.380  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:53:43.383  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.441 seconds (JVM running for 1927.755)
+2022-04-16 21:53:43.384  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 21:54:05.312  INFO 7488 --- [Thread-83] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:54:05.312  INFO 7488 --- [Thread-83] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown initiated...
+2022-04-16 21:54:05.319  INFO 7488 --- [Thread-83] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown completed.
+2022-04-16 21:54:05.385  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Starting OtServerSideApplication using Java 17 on DESKTOP-5P054A6 with PID 7488 (C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side\target\classes started by venzo in C:\Users\venzo\OneDrive\Desktop\projects\OpenTube\OT-Server-Side)
+2022-04-16 21:54:05.385  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 21:54:05.562  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 21:54:05.564  INFO 7488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-04-16 21:54:05.672  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-16 21:54:05.674  INFO 7488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-16 21:54:05.674  INFO 7488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-16 21:54:05.696  INFO 7488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-16 21:54:05.697  INFO 7488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 311 ms
+2022-04-16 21:54:05.731  INFO 7488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 21:54:05.736  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Starting...
+2022-04-16 21:54:05.737  WARN 7488 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-04-16 21:54:05.781  INFO 7488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Start completed.
+2022-04-16 21:54:05.781  INFO 7488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-04-16 21:54:05.799  INFO 7488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 21:54:05.800  INFO 7488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 21:54:05.818  WARN 7488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 21:54:05.887  WARN 7488 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b053fcdb-a8c0-4746-8d8b-d522b1e680f4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-04-16 21:54:05.893  INFO 7488 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-04-16 21:54:05.902  INFO 7488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-16 21:54:05.911  INFO 7488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-16 21:54:05.913  INFO 7488 --- [restartedMain] c.j.O.c.O.O.OtServerSideApplication      : Started OtServerSideApplication in 0.55 seconds (JVM running for 1950.285)
+2022-04-16 21:54:05.914  INFO 7488 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-04-16 23:54:22.368  WARN 7488 --- [HikariPool-22 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-22 - Thread starvation or clock leap detected (housekeeper delta=1h59m16s458ms569µs).
