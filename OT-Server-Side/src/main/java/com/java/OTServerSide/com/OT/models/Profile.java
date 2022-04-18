@@ -1,9 +1,13 @@
 package com.java.OTServerSide.com.OT.models;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.websocket.Decoder.Binary;
 
 import com.java.OTServerSide.com.OT.security.models.User;
@@ -15,7 +19,8 @@ public class Profile {
 	 private String id;
 	 private String title;
 	 private Binary image;
-	 
+	 @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+	 @JoinColumn(name="user_id")
 	 private User user;
 	 public Profile() {}
 	 

@@ -6,10 +6,15 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import com.java.OTServerSide.com.OT.security.models.User;
 
@@ -25,7 +30,11 @@ public class Video {
 	private int likes;
 	private int dislikes;
 	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "video")
 	private List<RootComment> comments = new ArrayList<RootComment>();
+	
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+	@JoinColumn(name="channel_id")
 	private Channel channel;
 	
 	public Video() {}

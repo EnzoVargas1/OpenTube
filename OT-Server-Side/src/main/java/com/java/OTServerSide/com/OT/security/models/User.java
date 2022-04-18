@@ -3,9 +3,12 @@ import java.io.File;
 import java.util.*;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import com.java.OTServerSide.com.OT.models.Channel;
 import com.java.OTServerSide.com.OT.models.Profile;
@@ -23,8 +26,11 @@ public class User {
 	private String phoneNumber;
 	private Date birthDate;
 	
+	@OneToOne(fetch = FetchType.LAZY, mappedBy = "user")
 	private Profile profile;
+	@OneToOne(fetch = FetchType.LAZY, mappedBy = "user")
 	private Channel channel;
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
 	private Subscriber subscribers;
 	
 	public User() {}
