@@ -68,7 +68,6 @@ public class Channel {
 	}
 
 	public void setViews(int views) {
-		
 		this.views = views;
 	}
 
@@ -112,4 +111,11 @@ public class Channel {
 		this.videos = videos;
 	}
 	
+	public void countStats() {
+		for(int i = 0; i < videos.size(); i++) {
+			setViews(getViews() + videos.get(i).getViews());
+			setLikes(getLikes() + videos.get(i).getLikes());
+			setDislikes(getDislikes() + videos.get(i).getDislikes());
+		}
+	}
 }

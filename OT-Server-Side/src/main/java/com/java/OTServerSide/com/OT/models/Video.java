@@ -29,6 +29,7 @@ public class Video {
 	private boolean isPrivate;
 	private int likes;
 	private int dislikes;
+	private int views;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "video")
 	private List<RootComment> comments = new ArrayList<RootComment>();
@@ -102,4 +103,29 @@ public class Video {
 	public void setDislikes(int dislikes) {
 		this.dislikes = dislikes;
 	}
+
+	public int getViews() {
+		return views;
+	}
+
+	public void setViews(int views) {
+		this.views = views;
+	}
+
+	public List<RootComment> getComments() {
+		return comments;
+	}
+
+	public void setComments(List<RootComment> comments) {
+		this.comments = comments;
+	}
+
+	public Channel getChannel() {
+		return channel;
+	}
+
+	public void setChannel(Channel channel) {
+		this.channel = channel;
+	}
+	
 }
