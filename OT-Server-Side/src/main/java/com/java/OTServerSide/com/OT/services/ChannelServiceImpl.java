@@ -18,7 +18,7 @@ public class ChannelServiceImpl implements ChannelService {
 	@Override
 	public List<Channel> getChannels() {
 		// TODO Auto-generated method stub
-		return null;
+		return channelRepository.findAll();
 	}
 	
 	@Override
@@ -28,18 +28,33 @@ public class ChannelServiceImpl implements ChannelService {
 		if(channel == null) {
 			throw new NoResourceFoundException("No Resource Found");
 		}
+		channel.countStats();
 		return channel;
 	}
 
 	@Override
-	public Channel deleteChannelById(int id) {
+	public Channel deleteChannelById(int id) throws NoResourceFoundException {
 		// TODO Auto-generated method stub
-		return null;
+		Channel channel = channelRepository.findById(id).orElse(null);
+		if(channel == null) {
+			throw new NoResourceFoundException("No Resource Found");
+		}
+
+		return channel;
 	}
 
 	@Override
 	public Channel addChannel(Channel channel) {
 		// TODO Auto-generated method stub
-		return null;
+		channelRepository.save(channel);
+		return channel;
+	}
+
+	@Override
+	public List<Channel> getSortedChannelsByPopularity() {
+		// TODO Auto-generated method stub
+		List<Channel> channels = channelRepository.findAll();
+		channels.sort((x, y) -> Integer.compare(x.getSubscribers().size(), y.getSubscribers().size()));
+		return channels;
 	}
 }

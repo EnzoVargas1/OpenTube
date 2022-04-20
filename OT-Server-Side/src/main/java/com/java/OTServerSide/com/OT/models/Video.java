@@ -40,10 +40,9 @@ public class Video {
 	
 	public Video() {}
 	
-	public Video(String name, boolean isPrivate, Date date, InputStream inputStream) {
+	public Video(String name, boolean isPrivate, InputStream inputStream) {
 		this.name = name;
 		this.isPrivate = isPrivate;
-		this.date = date;
 		this.inputStream = inputStream;
 	}
 	
