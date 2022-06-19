@@ -1,0 +1,44 @@
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      /* Dark mode variables go here */
+      --text-color: #eee;
+      --bkg-color: #252222;
+      --btn-txt-color: rgb(46, 43, 43);
+      --btn-bg-color: rgb(20, 211, 195);
+    }
+  }
+
+  .dark {
+    /* Dark mode variables go here */
+    --text-color: #eee;
+    --bkg-color: #252222;
+    --bkg2-color:#302d2d;
+    --btn-txt-color: rgb(46, 43, 43);
+    --btn-bg-color: rgb(20, 211, 195);
+  }
+
+.navBar{
+    background-color: #252222;
+    border: 3px solid #252222;
+    margin-right: -8px;
+    margin-left: -8px;
+    margin-top: -8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title{
+    margin: auto;
+    text-align: center;
+    color:#eee;
+}
+
+.main{
+    background-color:#302d2d;
+    border: 3px solid #302d2d;
+    margin-right: -8px;
+    margin-left: -8px;
+    margin-top: -8px;
+    height: 700px;
+    font-family: Arial, Helvetica, sans-serif;
+}
