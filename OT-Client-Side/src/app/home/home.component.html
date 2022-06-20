@@ -3,6 +3,9 @@
 </div>
 
 <div class="main">
-    <form>
-    </form>
+    <div class="searchbar">
+        <input type="text" #searchbar [(ngModel)]="searchInput" (keyup)="fetchSeries($event.key)"
+        placeholder="search something" size="50px"/>
+        
+    </div>
 </div>
