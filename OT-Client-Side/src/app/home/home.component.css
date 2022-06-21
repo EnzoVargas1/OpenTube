@@ -48,3 +48,21 @@
   border: 3px solid #252222;
   text-align: center;
 }
+
+.result{
+  margin: auto;
+  color:#e7dfdd;
+  text-align: center;
+}
+
+.content{
+  border: 3px solid #252222;
+  margin-top: 50px;
+  height: 400px;
+}
+
+.card{
+  border: 3px solid #252222;
+  margin-top: 50px;
+  height: 200px;
+}

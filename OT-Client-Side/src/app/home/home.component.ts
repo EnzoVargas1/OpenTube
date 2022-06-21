@@ -19,15 +19,14 @@ export class HomeComponent implements OnInit {
   }
 
   fetchSeries(value: any):void{
-    if(value.length === 1){
-      this.results = this.vids.filter((name) => name.substring(0, this.searchInput.length).toLowerCase().trim()
-       == this.searchInput.toLowerCase().trim());
+      if(this.searchInput.length == 0){
+        this.results = [];
+      }
+      else{
+        this.results = this.vids.filter((name) => name.substring(0, this.searchInput.length).toLowerCase().trim()
+        == this.searchInput.toLowerCase().trim());
+      }
       console.log(this.searchInput);
       console.log(this.results);
-     }
-     else if(value.toLowerCase() === 'backspace'){
-      this.searchInput = this.searchInput.substring(0, this.searchInput.length-1);
-     }
   }
-
 }
