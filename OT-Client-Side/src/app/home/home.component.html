@@ -5,18 +5,17 @@
 <div class="main">
     <div class="searchbar">
         <input type="text" #searchbar [(ngModel)]="searchInput" (keyup)="fetchSeries($event.key)"
-        placeholder="search something" size="50px"/>
-        <br/>
-        <br/>
+        placeholder="search something" size="50px" typehead=""/>
+        <div *ngIf="results.length > 0" class="dropdown">
         <div *ngFor ="let result of results">
             <h4 class="result">
                 {{result}}
             </h4>
         </div>
     </div>
+    </div>
     <div class="content">
-        <div class="card">
-            
+        <div class="card">     
         </div>
     </div>
 </div>

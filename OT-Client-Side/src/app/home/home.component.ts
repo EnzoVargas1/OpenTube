@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   'stuff', 'Before I Forget', 'maladaptive daydreaming', 'Python 101', 'enzo'];
   public results: Array<string> = [];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }

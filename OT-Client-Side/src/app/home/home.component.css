@@ -49,9 +49,16 @@
   text-align: center;
 }
 
+.dropdown{
+  background-color: white;
+  border: 3px solid black;
+  margin-left: 760px;
+  margin-right: 760px;
+}
+
 .result{
   margin: auto;
-  color:#e7dfdd;
+  color:black;
   text-align: center;
 }
 
