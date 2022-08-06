@@ -1,19 +1,12 @@
-package com.java.OTServerSide.com.OT.security.models;
-import java.io.File;
+package com.java.OT.security.models;
+import com.java.OT.models.Channel;
+import com.java.OT.models.Profile;
+import com.java.OT.models.Subscriber;
+
 import java.util.*;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
-import com.java.OTServerSide.com.OT.models.Channel;
-import com.java.OTServerSide.com.OT.models.Profile;
-import com.java.OTServerSide.com.OT.models.Subscriber;
-import com.java.OTServerSide.com.OT.models.Video;
 
 @Entity
 public class User {
@@ -30,9 +23,6 @@ public class User {
 	private Profile profile;
 	@OneToOne(fetch = FetchType.LAZY, mappedBy = "user")
 	private Channel channel;
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
-	private Subscriber subscribers;
-	
 	public User() {}
 	
 	public User(String username, String password, String email, 

@@ -1,19 +1,17 @@
-package com.java.OTServerSide.com.OT.services;
+package com.java.OT.services;
 
-import java.io.File;
 import java.io.IOException;
 
+import com.java.OT.exceptions.NoResourceFoundException;
+import com.java.OT.repositiory.VideoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.multipart.MultipartFile;
-
-import com.java.OTServerSide.com.OT.exceptions.NoResourceFoundException;
-import com.java.OTServerSide.com.OT.models.Video;
-import com.java.OTServerSide.com.OT.repositiory.VideoRepository;
+import com.java.OT.models.Video;
 
 public class VideoServiceImpl implements VideoService {
 	
 	@Autowired
-	VideoRepository videoRepository;
+    VideoRepository videoRepository;
 
 	@Override
 	public String addVideo(String name, boolean isPrivate, MultipartFile file) throws IOException {
@@ -24,7 +22,7 @@ public class VideoServiceImpl implements VideoService {
 	}
 
 	@Override
-	public Video getVideo(int id) throws IOException, IllegalStateException, NoResourceFoundException{
+	public Video getVideo(int id) throws IOException, IllegalStateException, NoResourceFoundException {
 		// TODO Auto-generated method stub
 		Video vid = videoRepository.findById(id).orElse(null);
 		if(vid == null)

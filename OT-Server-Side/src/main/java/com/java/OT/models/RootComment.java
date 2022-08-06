@@ -1,4 +1,4 @@
-package com.java.OTServerSide.com.OT.models;
+package com.java.OT.models;
 
 import java.util.ArrayList;
 import java.util.Date;

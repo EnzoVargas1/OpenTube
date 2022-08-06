@@ -1,11 +1,12 @@
-package com.java.OTServerSide.com.OT.services;
+package com.java.OT.services;
 
 import java.io.IOException;
 
+import com.java.OT.exceptions.NoResourceFoundException;
+import com.java.OT.models.Video;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.java.OTServerSide.com.OT.exceptions.NoResourceFoundException;
-import com.java.OTServerSide.com.OT.models.Video;
+
 
 public interface VideoService {
 	public String addVideo(String name, boolean isPrivate, MultipartFile file)throws IOException;

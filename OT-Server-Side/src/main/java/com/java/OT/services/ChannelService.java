@@ -1,9 +1,10 @@
-package com.java.OTServerSide.com.OT.services;
+package com.java.OT.services;
 
 import java.util.List;
 
-import com.java.OTServerSide.com.OT.exceptions.NoResourceFoundException;
-import com.java.OTServerSide.com.OT.models.Channel;
+import com.java.OT.exceptions.NoResourceFoundException;
+import com.java.OT.models.Channel;
+
 
 public interface ChannelService {
 	public List<Channel> getChannels();

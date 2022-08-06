@@ -1,19 +1,19 @@
-package com.java.OTServerSide.com.OT.services;
+package com.java.OT.services;
 
 import java.util.List;
-
+import  com.java.OT.models.Channel;
+import com.java.OT.exceptions.NoResourceFoundException;
+import com.java.OT.repositiory.ChannelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.java.OTServerSide.com.OT.exceptions.NoResourceFoundException;
-import com.java.OTServerSide.com.OT.models.Channel;
-import com.java.OTServerSide.com.OT.repositiory.ChannelRepository;
+
 
 @Service
 public class ChannelServiceImpl implements ChannelService {
 	
 	@Autowired
-	ChannelRepository channelRepository;
+    ChannelRepository channelRepository;
 	
 	@Override
 	public List<Channel> getChannels() {
@@ -22,7 +22,7 @@ public class ChannelServiceImpl implements ChannelService {
 	}
 	
 	@Override
-	public Channel findChannelById(int id) throws NoResourceFoundException{
+	public Channel findChannelById(int id) throws NoResourceFoundException {
 		// TODO Auto-generated method stub
 		Channel channel = channelRepository.findById(id).orElse(null);
 		if(channel == null) {

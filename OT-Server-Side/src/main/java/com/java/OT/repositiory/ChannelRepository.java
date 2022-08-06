@@ -1,8 +1,8 @@
-package com.java.OTServerSide.com.OT.repositiory;
+package com.java.OT.repositiory;
 
+import com.java.OT.models.Channel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.java.OTServerSide.com.OT.models.Channel;
 
 public interface ChannelRepository extends JpaRepository<Channel, Integer>{
 

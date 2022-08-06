@@ -1,4 +1,4 @@
-package com.java.OTServerSide.com.OT.models;
+package com.java.OT.models;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -10,7 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.websocket.Decoder.Binary;
 
-import com.java.OTServerSide.com.OT.security.models.User;
+import com.java.OT.security.models.User;
 
 @Entity
 public class Profile {

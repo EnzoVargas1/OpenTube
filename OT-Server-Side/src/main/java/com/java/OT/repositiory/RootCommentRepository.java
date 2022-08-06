@@ -1,8 +1,9 @@
-package com.java.OTServerSide.com.OT.repositiory;
+package com.java.OT.repositiory;
 
+import com.java.OT.models.RootComment;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.java.OTServerSide.com.OT.models.RootComment;
+
 
 public interface RootCommentRepository extends JpaRepository<RootComment, Integer>{
 

@@ -1,4 +1,4 @@
-package com.java.OTServerSide.com.OT.exceptions;
+package com.java.OT.exceptions;
 
 public class NoResourceFoundException extends Exception {
 	public NoResourceFoundException(String msg) {

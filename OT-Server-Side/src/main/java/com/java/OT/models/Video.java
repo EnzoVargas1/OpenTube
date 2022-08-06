@@ -1,6 +1,5 @@
-package com.java.OTServerSide.com.OT.models;
+package com.java.OT.models;
 
-import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,8 +14,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-
-import com.java.OTServerSide.com.OT.security.models.User;
 
 @Entity
 public class Video {
